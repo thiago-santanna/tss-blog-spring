@@ -6,17 +6,17 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-light bg-light">
+		<nav class="navbar navbar-light bg-secondary">
 		  <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1" style="font-weight: bold;">Tss Blog Spring</span>
+            <span class="navbar-brand mb-0 h1 text-white" style="font-weight: bold;">Tss Blog Spring</span>
             <a href="/newpost" class="btn btn-primary" role="button">Novo Post</a>
 		  </div>
 		</nav>		
 	</header>
 	<section>
-		<div class="container" style="width: 60%; padding-bottom: 2rem;">
+		<div class="container bg-light" style="width: 60%; padding-bottom: 2rem;">
 			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb" style="background-color: white; padding-left: 0px;">
+			  <ol class="breadcrumb bg-light fw-bold" style="padding-left: 0px;">
 			    <li class="breadcrumb-item active" aria-current="page">Posts</li>
 			  </ol>
 			</nav>		
@@ -28,9 +28,9 @@
 			    	<span th:text="${post.date}"></span>
 			    </p> 
 			    
-			    <a th:href="${(#mvc.url('BC#getPostId').arg(0, post.id)).build()}">
-			    	<h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;">
-			    		|<span th:text="${post.title}"></span>
+			    <a class="text-decoration-none" th:href="${(#mvc.url('BC#getPostId').arg(0, post.id)).build()}">
+			    	<h4 class="card-title text-primary" style="font-weight: bold; padding-top: 5px;">
+			    		<span th:text="${post.title}"></span>
 			    	</h4>
 			    </a>
 			    

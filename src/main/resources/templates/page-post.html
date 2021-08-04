@@ -7,18 +7,18 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-light bg-light">
+		<nav class="navbar navbar-light bg-secondary">
 		  <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1" style="font-weight: bold;">Tss Blog Spring</span>
+            <span class="navbar-brand mb-0 h1 text-white" style="font-weight: bold;">Tss Blog Spring</span>
             <a href="/newpost" class="btn btn-primary" role="button">Novo Post</a>
 		  </div>
 		</nav>		
 	</header>
 	
 	<main>
-		<div class="container" style="width: 60%; padding-bottom: 2rem;">
+		<div class="container bg-light" style="width: 60%; padding-bottom: 2rem;">
 			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb" style="background-color: white; padding-left: 0px;">
+			  <ol class="breadcrumb bg-light fw-bold" style="background-color: white; padding-left: 0px;">
 			    <li class="breadcrumb-item" aria-current="page"><a href="/posts">Posts</a></li>
 			    <li class="breadcrumb-item active" aria-current="page">Post</li>
 			  </ol>
@@ -30,12 +30,12 @@
 				</h1>
 				
 				<p class="card-subtitle mb-2 text-muted">
-					<i class="material-icons">person_outline</i>
+					<i class="material-icons text-warning">person_outline</i>
 					<span th:text="${postItem.author}"></span>
 					
 					<br>
 					
-					<i class="material-icons">date_range</i>
+					<i class="material-icons text-warning">date_range</i>
 					<span th:text="${postItem.date}"></span>
 				</p>
 				<section>
